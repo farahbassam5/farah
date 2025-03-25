@@ -1,0 +1,66 @@
+/* أسلوب عام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Cairo", sans-serif;
+    background: linear-gradient(145deg, #4a90e2, #74b9ff);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+header {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.button {
+    background: linear-gradient(145deg, #4a90e2, #74b9ff);
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    margin: 10px 0;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background: linear-gradient(145deg, #357ab8, #4a90e2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    margin-top: 20px;
+    opacity: 0.7;
+}

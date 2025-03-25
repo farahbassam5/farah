@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تتبع أعراض الشقيقة</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Tajawal", sans-serif;
+            background-color: #6bbaf7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+            text-align: center;
+            width: 400px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 10px;
+            display: block;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        select, input {
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            margin-bottom: 15px;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+        button {
+            background-color: #3086f7;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.3rem;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #2566b5;
+        }
+        .back-button {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-top: 15px;
+            font-size: 1rem;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🩺 تتبع أعراض الشقيقة</h1>
+    
+    <label for="symptoms">اختر الأعراض:</label>
+    <select id="symptoms">
+        <option>ألم شديد</option>
+        <option>غثيان</option>
+        <option>حساسية للضوء</option>
+    </select>
+
+    <label for="time">وقت النوبة:</label>
+    <input type="time" id="time">
+
+    <button>➕ أضف الأعراض</button>
+    <a href="index.html">
+        <button class="back-button">🏠 عودة إلى الصفحة الرئيسية</button>
+    </a>
+</div>
+
+</body>
+</html>

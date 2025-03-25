@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التنبيهات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>التنبيهات</h1></header>
+
+<div class="container">
+    <div>🛑 ألم شديد - 10:00 صباحاً</div>
+    <div>⚠️ ضغط نفسي - 3:00 مساءً</div>
+    <div>💤 قلة النوم - 11:00 مساءً</div>
+</div>
+
+<div id="data-container">
+    <h3>بيانات الصحة</h3>
+    <div class="data-item" id="temperature">درجة الحرارة: --- °C</div>
+    <div class="data-item" id="heartRate">نبضات القلب: --- bpm</div>
+</div>
+
+<a href="index.html" class="button">الرجوع للصفحة الرئيسية</a>
+
+<script>
+async function fetchData() {
+    const response = await fetch('https://api.thingspeak.com/channels/2892189/field/1.json?results=1');
+    const data = await response.json();
+    
+    if (data.feeds && data.feeds.length > 0) {
+        const temperature = data.feeds[0].field1;
+        const heartRate = data.feeds[0].field2;
+        
+        document.getElementById('temperature').innerText = `درجة الحرارة: ${temperature} °C`;
+        document.getElementById('heartRate').innerText = `نبضات القلب: ${heartRate} bpm`;
+    } else {
+        document.getElementById('temperature').innerText = "لا توجد بيانات";
+        document.getElementById('heartRate').innerText = "لا توجد بيانات";
+    }
+}
+
+setInterval(fetchData, 60000);
+fetchData();
+</script>
+
+</body>
+</html>
